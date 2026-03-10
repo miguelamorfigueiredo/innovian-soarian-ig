@@ -1,0 +1,15 @@
+id: innovian.to.soarian
+canonical: http://hospitaldaluz.pt/fhir/ig/vitalsigns
+name: IGiNNOVIANtoSOARIAN
+title: "Guia de Implementação: Integração de Sinais Vitais (iNNOVIAN -> SOARIAN)"
+status: draft
+version: 1.0.0
+releaseLabel: draft
+copyrightYear: "2026"
+fhirVersion: 4.0.1
+publisher:
+  name: Miguel Figueiredo
+
+pages:
+  index.md:
+    title: Regras de Extração e Janelas Temporais
