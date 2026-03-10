@@ -1,0 +1,71 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hospitaldaluz.pt/fhir/ig/vitalsigns/OperationDefinition/vitals-snapshot> a fhir:OperationDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "vitals-snapshot"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: OperationDefinition vitals-snapshot</b></p><a name=\"vitals-snapshot\"> </a><a name=\"hcvitals-snapshot\"> </a><p>URL: [base]/Observation/$vitals-snapshot</p><h3>Parâmetros</h3><table class=\"grid\"><tr><td><b>Utilização</b></td><td><b>Nome</b></td><td><b>Âmbito de aplicação</b></td><td><b>Cardinalidade</b></td><td><b>Tipo</b></td><td><b>Vínculo</b></td><td><b>Documentação</b></td></tr><tr><td>IN</td><td>requestId</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a></td><td/><td><div><p>Identificador único do pedido (UUID).</p>\n</div></td></tr><tr><td>IN</td><td>patient</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>Identificador do Cliente (Preferencialmente o NHC).</p>\n</div></td></tr><tr><td>IN</td><td>requestedDateTime</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#dateTime\">dateTime</a></td><td/><td><div><p>Hora da colheita no Soarian (timestamp T).</p>\n</div></td></tr><tr><td>IN</td><td>code</td><td/><td>1..*</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Coding\">Coding</a></td><td/><td><div><p>Lista de códigos LOINC dos sinais vitais a extrair</p>\n</div></td></tr><tr><td>OUT</td><td>return</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/bundle.html\">Bundle</a></td><td/><td><div><p>Resposta do servidor em formato de Bundle com as avaliações individuais</p>\n</div></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "http://hospitaldaluz.pt/fhir/ig/vitalsigns/OperationDefinition/vitals-snapshot"^^xsd:anyURI ;
+     fhir:l <http://hospitaldaluz.pt/fhir/ig/vitalsigns/OperationDefinition/vitals-snapshot>
+  ] ; # 
+  fhir:version [ fhir:v "1.0.0"] ; # 
+  fhir:name [ fhir:v "VitalsSnapshot"] ; # 
+  fhir:title [ fhir:v "Operação - Extração de Snapshot de Sinais Vitais"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:kind [ fhir:v "operation"] ; # 
+  fhir:date [ fhir:v "2026-03-09T17:59:40+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Miguel Figueiredo"] ; # 
+  fhir:description [ fhir:v "Operação personalizada para pedir os sinais vitais ao iNNOVIAN baseada na Hora da Colheita."] ; # 
+  fhir:code [ fhir:v "vitals-snapshot"] ; # 
+  fhir:resource ( [ fhir:v "Observation"] ) ; # 
+  fhir:system [ fhir:v false] ; # 
+  fhir:type [ fhir:v true] ; # 
+  fhir:instance [ fhir:v false] ; # 
+  fhir:parameter ( [
+     fhir:name [ fhir:v "requestId" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v 1 ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "Identificador único do pedido (UUID)." ] ;
+     fhir:type [ fhir:v "string" ]
+  ] [
+     fhir:name [ fhir:v "patient" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v 1 ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "Identificador do Cliente (Preferencialmente o NHC)." ] ;
+     fhir:type [ fhir:v "Identifier" ]
+  ] [
+     fhir:name [ fhir:v "requestedDateTime" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v 1 ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "Hora da colheita no Soarian (timestamp T)." ] ;
+     fhir:type [ fhir:v "dateTime" ]
+  ] [
+     fhir:name [ fhir:v "code" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v 1 ] ;
+     fhir:max [ fhir:v "*" ] ;
+     fhir:documentation [ fhir:v "Lista de códigos LOINC dos sinais vitais a extrair" ] ;
+     fhir:type [ fhir:v "Coding" ]
+  ] [
+     fhir:name [ fhir:v "return" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:min [ fhir:v 1 ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "Resposta do servidor em formato de Bundle com as avaliações individuais" ] ;
+     fhir:type [ fhir:v "Bundle" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

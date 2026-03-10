@@ -1,0 +1,101 @@
+<hr/><a name="l1"> </a>
+<p>#1</p>
+<pre>
+GET https://tx.fhir.org/r4/metadata HTTP/1.0
+Accept: application/fhir+json; fhirVersion=4.0
+User-Agent: fhir/publisher
+</pre>
+<pre>
+200
+access-control-allow-headers:Origin, X-Requested-With, Content-Type, Accept
+access-control-allow-methods:GET, POST, OPTIONS
+access-control-allow-origin:*
+connection:keep-alive
+content-length:3918
+content-type:application/fhir+json; charset=utf-8
+date:Mon, 09 Mar 2026 17:59:51 GMT
+etag:W/&quot;f4e-vmTIVKsKIB8DelErDqyQgzkOBRo&quot;
+server:nginx
+x-powered-by:Express
+x-request-id:tx-1925604
+
+{&quot;resourceType&quot;:&quot;CapabilityStatement&quot;,&quot;id&quot;:&quot;FhirServer&quot;,&quot;extension&quot;:[{&quot;extension&quot;:[{&quot;url&quot;:&quot;definition&quot;,&quot;valueCanonical&quot;:&quot;http://hl7.org/fhir/uv/tx-tests/FeatureDefinition/test-version&quot;},{&quot;url&quot;:&quot;value&quot;,&quot;valueCode&quot;:&quot;1.8.0&quot;},{&quot;extension&quot;:[{&quot;url&quot;:&quot;name&quot;,&quot;valueCode&quot;:&quot;mode&quot;},{&quot;url&quot;:&quot;value&quot;,&quot;valueCode&quot;:&quot;tx.fhir.org&quot;}],&quot;url&quot;:&quot;qualifier&quot;}],&quot;url&quot;:&quot;http://hl7.org/fhir/uv/application-feature/StructureDefinition/feature&quot;},{&quot;extension&quot;:[{&quot;url&quot;:&quot;definition&quot;,&quot;valueCanonical&quot;:&quot;http://hl7.org/fhir/uv/tx-ecosystem/FeatureDefinition/CodeSystemAsParameter&quot;},{&quot;url&quot;:&quot;value&quot;,&quot;valueBoolean&quot;:true}],&quot;url&quot;:&quot;http://hl7.org/fhir/uv/application-feature/StructureDefinition/feature&quot;}],&quot;url&quot;:&quot;https://tx.fhir.org/r4/CapabilityStatement/tx&quot;,&quot;version&quot;:&quot;4.0.1-0.6.0&quot;,&quot;name&quot;:&quot;FHIRTerminologyServer&quot;,&quot;title&quot;:&quot;FHIR Terminology Server&quot;,&quot;status&quot;:&quot;active&quot;,&quot;date&quot;:&quot;2026-03-09T17:59:51.048Z&quot;,&quot;contact&quot;:[{&quot;telecom&quot;:[{&quot;system&quot;:&quot;other&quot;,&quot;value&quot;:&quot;http://example.org/&quot;}]}],&quot;description&quot;:&quot;FHIR Terminology Server&quot;,&quot;kind&quot;:&quot;instance&quot;,&quot;instantiates&quot;:[&quot;http://hl7.org/fhir/CapabilityStatement/terminology-server&quot;],&quot;software&quot;:{&quot;name&quot;:&quot;FHIRsmith&quot;,&quot;version&quot;:&quot;0.6.0&quot;,&quot;releaseDate&quot;:&quot;2026-03-09T17:59:51.048Z&quot;},&quot;implementation&quot;:{&quot;description&quot;:&quot;FHIR Server running at https://tx.fhir.org/r4&quot;,&quot;url&quot;:&quot;https://tx.fhir.org/r4&quot;},&quot;fhirVersion&quot;:&quot;4.0.1&quot;,&quot;format&quot;:[&quot;application/fhir+xml&quot;,&quot;application/fhir+json&quot;],&quot;rest&quot;:[{&quot;mode&quot;:&quot;server&quot;,&quot;security&quot;:{&quot;cors&quot;:true},&quot;resource&quot;:[{&quot;type&quot;:&quot;CodeSystem&quot;,&quot;interaction&quot;:[{&quot;code&quot;:&quot;read&quot;,&quot;documentation&quot;:&quot;Read a code system&quot;},{&quot;code&quot;:&quot;search-type&quot;,&quot;documentation&quot;:&quot;Search the code systems&quot;}],&quot;searchParam&quot;:[{&quot;name&quot;:&quot;url&quot;,&quot;type&quot;:&quot;uri&quot;},{&quot;name&quot;:&quot;version&quot;,&quot;type&quot;:&quot;token&quot;},{&quot;name&quot;:&quot;name&quot;,&quot;type&quot;:&quot;string&quot;},{&quot;name&quot;:&quot;title&quot;,&quot;type&quot;:&quot;string&quot;},{&quot;name&quot;:&quot;status&quot;,&quot;type&quot;:&quot;token&quot;},{&quot;name&quot;:&quot;_id&quot;,&quot;type&quot;:&quot;token&quot;}],&quot;operation&quot;:[{&quot;name&quot;:&quot;lookup&quot;,&quot;definition&quot;:&quot;http://hl7.org/fhir/OperationDefinition/CodeSystem-lookup&quot;},{&quot;name&quot;:&quot;validate-code&quot;,&quot;definition&quot;:&quot;http://hl7.org/fhir/OperationDefinition/CodeSystem-validate-code&quot;},{&quot;name&quot;:&quot;subsumes&quot;,&quot;definition&quot;:&quot;http://hl7.org/fhir/OperationDefinition/CodeSystem-subsumes&quot;}]},{&quot;type&quot;:&quot;ValueSet&quot;,&quot;interaction&quot;:[{&quot;code&quot;:&quot;read&quot;,&quot;documentation&quot;:&quot;Read a ValueSet&quot;},{&quot;code&quot;:&quot;search-type&quot;,&quot;documentation&quot;:&quot;Search the value sets&quot;}],&quot;searchParam&quot;:[{&quot;name&quot;:&quot;url&quot;,&quot;type&quot;:&quot;uri&quot;},{&quot;name&quot;:&quot;version&quot;,&quot;type&quot;:&quot;token&quot;},{&quot;name&quot;:&quot;name&quot;,&quot;type&quot;:&quot;string&quot;},{&quot;name&quot;:&quot;title&quot;,&quot;type&quot;:&quot;string&quot;},{&quot;name&quot;:&quot;status&quot;,&quot;type&quot;:&quot;token&quot;},{&quot;name&quot;:&quot;_id&quot;,&quot;type&quot;:&quot;token&quot;}],&quot;operation&quot;:[{&quot;name&quot;:&quot;expand&quot;,&quot;definition&quot;:&quot;http://hl7.org/fhir/OperationDefinition/ValueSet-expand&quot;},{&quot;name&quot;:&quot;validate-code&quot;,&quot;definition&quot;:&quot;http://hl7.org/fhir/OperationDefinition/ValueSet-validate-code&quot;}]},{&quot;type&quot;:&quot;ConceptMap&quot;,&quot;interaction&quot;:[{&quot;code&quot;:&quot;read&quot;,&quot;documentation&quot;:&quot;Read a ConceptMap&quot;},{&quot;code&quot;:&quot;search-type&quot;,&quot;documentation&quot;:&quot;Search the concept maps&quot;}],&quot;searchParam&quot;:[{&quot;name&quot;:&quot;url&quot;,&quot;type&quot;:&quot;uri&quot;},{&quot;name&quot;:&quot;version&quot;,&quot;type&quot;:&quot;token&quot;},{&quot;name&quot;:&quot;name&quot;,&quot;type&quot;:&quot;string&quot;},{&quot;name&quot;:&quot;title&quot;,&quot;type&quot;:&quot;string&quot;},{&quot;name&quot;:&quot;status&quot;,&quot;type&quot;:&quot;token&quot;},{&quot;name&quot;:&quot;_id&quot;,&quot;type&quot;:&quot;token&quot;}],&quot;operation&quot;:[{&quot;name&quot;:&quot;translate&quot;,&quot;definition&quot;:&quot;http://hl7.org/fhir/OperationDefinition/ConceptMap-translate&quot;},{&quot;name&quot;:&quot;closure&quot;,&quot;definition&quot;:&quot;http://hl7.org/fhir/OperationDefinition/ConceptMap-closure&quot;}]}],&quot;interaction&quot;:[{&quot;code&quot;:&quot;transaction&quot;}],&quot;operation&quot;:[{&quot;name&quot;:&quot;expand&quot;,&quot;definition&quot;:&quot;http://hl7.org/fhir/OperationDefinition/ValueSet-expand&quot;},{&quot;name&quot;:&quot;lookup&quot;,&quot;definition&quot;:&quot;http://hl7.org/fhir/OperationDefinition/CodeSystem-lookup&quot;},{&quot;name&quot;:&quot;subsumes&quot;,&quot;definition&quot;:&quot;http://hl7.org/fhir/OperationDefinition/CodeSystem-subsumes&quot;},{&quot;name&quot;:&quot;validate-code&quot;,&quot;definition&quot;:&quot;http://hl7.org/fhir/OperationDefinition/Resource-validate-code&quot;},{&quot;name&quot;:&quot;translate&quot;,&quot;definition&quot;:&quot;http://hl7.org/fhir/OperationDefinition/ConceptMap-translate&quot;},{&quot;name&quot;:&quot;closure&quot;,&quot;definition&quot;:&quot;http://hl7.org/fhir/OperationDefinition/ConceptMap-closure&quot;},{&quot;name&quot;:&quot;versions&quot;,&quot;definition&quot;:&quot;http://hl7.org/fhir/OperationDefinition/fhir-versions&quot;}]}]}
+</pre>
+<hr/><a name="l2"> </a>
+<p>#2</p>
+<pre>
+POST https://tx.fhir.org/r4/ValueSet/$expand HTTP/1.0
+Accept: application/fhir+json; fhirVersion=4.0
+Content-Type: application/fhir+json; fhirVersion=4.0;charset=UTF-8
+User-Agent: fhir/publisher
+
+{"resourceType":"Parameters","parameter":[{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"},{"name":"defaultDisplayLanguage","valueCode":"en-US"},{"name":"includeDefinition","valueBoolean":false},{"name":"excludeNested","valueBoolean":false},{"name":"cache-id","valueId":"c685991a-1645-43fd-8735-6637457c0704"},{"name":"count","valueInteger":1000},{"name":"offset","valueInteger":0},{"name":"valueSet","resource":{"resourceType":"ValueSet","status":"active","compose":{"inactive":false,"include":[{"system":"http://loinc.org","concept":[{"code":"8867-4","display":"Heart rate"},{"code":"9279-1","display":"Respiratory rate"},{"code":"59408-5","display":"Oxygen saturation in Arterial blood by Pulse oximetry"},{"code":"8480-6","display":"Systolic blood pressure"},{"code":"8462-4","display":"Diastolic blood pressure"},{"code":"8310-5","display":"Body temperature"}]}]}}}]}
+</pre>
+<pre>
+200
+access-control-allow-headers:Origin, X-Requested-With, Content-Type, Accept
+access-control-allow-methods:GET, POST, OPTIONS
+access-control-allow-origin:*
+connection:keep-alive
+content-length:934
+content-type:application/fhir+json; charset=utf-8
+date:Mon, 09 Mar 2026 17:59:54 GMT
+etag:W/&quot;3a6-t8EAbAC5e1N0TjWdM8MJp4QKFCU&quot;
+server:nginx
+x-powered-by:Express
+x-request-id:tx-1925607
+
+{&quot;resourceType&quot;:&quot;ValueSet&quot;,&quot;status&quot;:&quot;active&quot;,&quot;expansion&quot;:{&quot;timestamp&quot;:&quot;2026-03-09T17:59:54.945Z&quot;,&quot;identifier&quot;:&quot;urn:uuid:3ccfa586-12a5-4b0b-837d-e55bd57967c9&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;excludeNested&quot;,&quot;valueBoolean&quot;:false},{&quot;name&quot;:&quot;includeDefinition&quot;,&quot;valueBoolean&quot;:false},{&quot;name&quot;:&quot;offset&quot;,&quot;valueInteger&quot;:0},{&quot;name&quot;:&quot;count&quot;,&quot;valueInteger&quot;:1000},{&quot;name&quot;:&quot;used-codesystem&quot;,&quot;valueUri&quot;:&quot;http://loinc.org|2.81&quot;}],&quot;offset&quot;:0,&quot;total&quot;:6,&quot;contains&quot;:[{&quot;system&quot;:&quot;http://loinc.org&quot;,&quot;code&quot;:&quot;8867-4&quot;,&quot;display&quot;:&quot;Heart rate&quot;},{&quot;system&quot;:&quot;http://loinc.org&quot;,&quot;code&quot;:&quot;9279-1&quot;,&quot;display&quot;:&quot;Respiratory rate&quot;},{&quot;system&quot;:&quot;http://loinc.org&quot;,&quot;code&quot;:&quot;59408-5&quot;,&quot;display&quot;:&quot;Oxygen saturation in Arterial blood by Pulse oximetry&quot;},{&quot;system&quot;:&quot;http://loinc.org&quot;,&quot;code&quot;:&quot;8480-6&quot;,&quot;display&quot;:&quot;Systolic blood pressure&quot;},{&quot;system&quot;:&quot;http://loinc.org&quot;,&quot;code&quot;:&quot;8462-4&quot;,&quot;display&quot;:&quot;Diastolic blood pressure&quot;},{&quot;system&quot;:&quot;http://loinc.org&quot;,&quot;code&quot;:&quot;8310-5&quot;,&quot;display&quot;:&quot;Body temperature&quot;}]}}
+</pre>
+<hr/><a name="l3"> </a>
+<p>#3</p>
+<pre>
+POST https://tx.fhir.org/r4/ValueSet/$batch-validate-code? HTTP/1.0
+Accept: application/fhir+json; fhirVersion=4.0
+Content-Type: application/fhir+json; fhirVersion=4.0;charset=UTF-8
+User-Agent: fhir/publisher
+
+{"resourceType":"Parameters","parameter":[{"name":"validation","resource":{"resourceType":"Parameters","parameter":[{"name":"coding","valueCoding":{"system":"http://loinc.org","code":"59408-5","display":"Oxygen saturation in Arterial blood by Pulse oximetry"}},{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"},{"name":"defaultDisplayLanguage","valueCode":"en-US"},{"name":"displayLanguage","valueString":"en, en-US"},{"name":"lenient-display-validation","valueBoolean":true},{"name":"default-to-latest-version","valueBoolean":true}]}}]}
+</pre>
+<pre>
+200
+access-control-allow-headers:Origin, X-Requested-With, Content-Type, Accept
+access-control-allow-methods:GET, POST, OPTIONS
+access-control-allow-origin:*
+connection:keep-alive
+content-length:373
+content-type:application/fhir+json; charset=utf-8
+date:Mon, 09 Mar 2026 17:59:55 GMT
+etag:W/&quot;175-BWBEA+sTn5zR8V9Ja6IjwSBwakk&quot;
+server:nginx
+x-powered-by:Express
+x-request-id:tx-1925608
+
+{&quot;resourceType&quot;:&quot;Parameters&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;validation&quot;,&quot;resource&quot;:{&quot;resourceType&quot;:&quot;Parameters&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;result&quot;,&quot;valueBoolean&quot;:true},{&quot;name&quot;:&quot;system&quot;,&quot;valueUri&quot;:&quot;http://loinc.org&quot;},{&quot;name&quot;:&quot;code&quot;,&quot;valueCode&quot;:&quot;59408-5&quot;},{&quot;name&quot;:&quot;version&quot;,&quot;valueString&quot;:&quot;2.81&quot;},{&quot;name&quot;:&quot;display&quot;,&quot;valueString&quot;:&quot;Oxygen saturation in Arterial blood by Pulse oximetry&quot;}]}}]}
+</pre>
+<hr/><a name="l4"> </a>
+<p>#4</p>
+<pre>
+POST https://tx.fhir.org/r4/ValueSet/$expand HTTP/1.0
+Accept: application/fhir+json; fhirVersion=4.0
+Content-Type: application/fhir+json; fhirVersion=4.0;charset=UTF-8
+User-Agent: fhir/publisher
+
+{"resourceType":"Parameters","parameter":[{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"},{"name":"defaultDisplayLanguage","valueCode":"en-US"},{"name":"includeDefinition","valueBoolean":false},{"name":"excludeNested","valueBoolean":false},{"name":"cache-id","valueId":"c685991a-1645-43fd-8735-6637457c0704"},{"name":"count","valueInteger":1000},{"name":"offset","valueInteger":0},{"name":"valueSet","resource":{"resourceType":"ValueSet","status":"active","compose":{"inactive":true,"include":[{"system":"http://loinc.org","concept":[{"code":"8867-4","display":"Heart rate"},{"code":"9279-1","display":"Respiratory rate"},{"code":"59408-5","display":"Oxygen saturation in Arterial blood by Pulse oximetry"},{"code":"8480-6","display":"Systolic blood pressure"},{"code":"8462-4","display":"Diastolic blood pressure"},{"code":"8310-5","display":"Body temperature"}]}]}}}]}
+</pre>
+<pre>
+200
+access-control-allow-headers:Origin, X-Requested-With, Content-Type, Accept
+access-control-allow-methods:GET, POST, OPTIONS
+access-control-allow-origin:*
+connection:keep-alive
+content-length:934
+content-type:application/fhir+json; charset=utf-8
+date:Mon, 09 Mar 2026 18:00:01 GMT
+etag:W/&quot;3a6-TLHvbGNRaDpbj97Fmv48KcaERV0&quot;
+server:nginx
+x-powered-by:Express
+x-request-id:tx-1925612
+
+{&quot;resourceType&quot;:&quot;ValueSet&quot;,&quot;status&quot;:&quot;active&quot;,&quot;expansion&quot;:{&quot;timestamp&quot;:&quot;2026-03-09T18:00:01.210Z&quot;,&quot;identifier&quot;:&quot;urn:uuid:2501583e-e127-4b8a-9258-f4fab8e6c0c4&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;excludeNested&quot;,&quot;valueBoolean&quot;:false},{&quot;name&quot;:&quot;includeDefinition&quot;,&quot;valueBoolean&quot;:false},{&quot;name&quot;:&quot;offset&quot;,&quot;valueInteger&quot;:0},{&quot;name&quot;:&quot;count&quot;,&quot;valueInteger&quot;:1000},{&quot;name&quot;:&quot;used-codesystem&quot;,&quot;valueUri&quot;:&quot;http://loinc.org|2.81&quot;}],&quot;offset&quot;:0,&quot;total&quot;:6,&quot;contains&quot;:[{&quot;system&quot;:&quot;http://loinc.org&quot;,&quot;code&quot;:&quot;8867-4&quot;,&quot;display&quot;:&quot;Heart rate&quot;},{&quot;system&quot;:&quot;http://loinc.org&quot;,&quot;code&quot;:&quot;9279-1&quot;,&quot;display&quot;:&quot;Respiratory rate&quot;},{&quot;system&quot;:&quot;http://loinc.org&quot;,&quot;code&quot;:&quot;59408-5&quot;,&quot;display&quot;:&quot;Oxygen saturation in Arterial blood by Pulse oximetry&quot;},{&quot;system&quot;:&quot;http://loinc.org&quot;,&quot;code&quot;:&quot;8480-6&quot;,&quot;display&quot;:&quot;Systolic blood pressure&quot;},{&quot;system&quot;:&quot;http://loinc.org&quot;,&quot;code&quot;:&quot;8462-4&quot;,&quot;display&quot;:&quot;Diastolic blood pressure&quot;},{&quot;system&quot;:&quot;http://loinc.org&quot;,&quot;code&quot;:&quot;8310-5&quot;,&quot;display&quot;:&quot;Body temperature&quot;}]}}
+</pre>

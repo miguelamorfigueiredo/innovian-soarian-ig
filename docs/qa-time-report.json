@@ -1,0 +1,285 @@
+{
+  "date" : "Tue, 10 Mar, 2026 06:45:15 +0000",
+  "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
+  "files" : [{
+    "name" : "/fsh-generated/resources/ImplementationGuide-innovian.to.soarian.json",
+    "size" : 2548,
+    "processes" : [{
+      "activity" : "load",
+      "start" : 14,
+      "length" : 12
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 14,
+      "length" : 1
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 15,
+      "length" : 7
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 15,
+      "length" : 29
+    },
+    {
+      "activity" : "validate",
+      "start" : 15,
+      "length" : 2845
+    },
+    {
+      "activity" : "generate1",
+      "start" : 18,
+      "length" : 40
+    },
+    {
+      "activity" : "generate2",
+      "start" : 21,
+      "length" : 42
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 26,
+      "length" : 1
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 29,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-ExampleHeartRatePreliminary.json",
+    "size" : 1161,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 14,
+      "length" : 5
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 14,
+      "length" : 1
+    },
+    {
+      "activity" : "loadDepInfo",
+      "start" : 14,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 15,
+      "length" : 126
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 18,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 18,
+      "length" : 22
+    },
+    {
+      "activity" : "generate1",
+      "start" : 18,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 21,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/OperationDefinition-vitals-snapshot.json",
+    "size" : 1535,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 14,
+      "length" : 4
+    },
+    {
+      "activity" : "load",
+      "start" : 14,
+      "length" : 11
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 15,
+      "length" : 14
+    },
+    {
+      "activity" : "validate",
+      "start" : 15,
+      "length" : 6
+    },
+    {
+      "activity" : "generate1",
+      "start" : 18,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 21,
+      "length" : 9
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-sinais-vitais-innovian-base.json",
+    "size" : 1849,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 14,
+      "length" : 5
+    },
+    {
+      "activity" : "load",
+      "start" : 14,
+      "length" : 9
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 14,
+      "length" : 49
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 15,
+      "length" : 24
+    },
+    {
+      "activity" : "validate",
+      "start" : 15,
+      "length" : 190
+    },
+    {
+      "activity" : "checkConformanceResources",
+      "start" : 18,
+      "length" : 1
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 18,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 18,
+      "length" : 189
+    },
+    {
+      "activity" : "generate2",
+      "start" : 21,
+      "length" : 604
+    },
+    {
+      "activity" : "generate2",
+      "start" : 22,
+      "length" : 1078
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 26,
+      "length" : 6
+    },
+    {
+      "activity" : "scanProfilesForR5",
+      "start" : 29,
+      "length" : 1
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 29,
+      "length" : 3
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ValueSet-codigos-vitais-innovian-vs.json",
+    "size" : 1162,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 14,
+      "length" : 5
+    },
+    {
+      "activity" : "load",
+      "start" : 14,
+      "length" : 6
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 15,
+      "length" : 26
+    },
+    {
+      "activity" : "validate",
+      "start" : 15,
+      "length" : 35
+    },
+    {
+      "activity" : "generate1",
+      "start" : 18,
+      "length" : 6
+    },
+    {
+      "activity" : "generate2",
+      "start" : 21,
+      "length" : 250
+    }]
+  },
+  {
+    "name" : "/input/includes/menu.xml",
+    "size" : 276,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 22,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/includes/head.html",
+    "size" : 200
+  },
+  {
+    "name" : "/fsh-generated/includes/fsh-link-references.md",
+    "size" : 284
+  },
+  {
+    "name" : "/input/pagecontent/index.md",
+    "size" : 2520,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 22,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/template/config",
+    "size" : 0
+  },
+  {
+    "name" : "/template/config/_config.yml",
+    "size" : 140
+  },
+  {
+    "name" : "/input/images",
+    "size" : 0
+  },
+  {
+    "name" : "/input/images/logo.png",
+    "size" : 128557
+  },
+  {
+    "name" : "/temp/pages/_includes/artifacts.xml",
+    "size" : 4252
+  }]
+}

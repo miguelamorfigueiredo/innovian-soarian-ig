@@ -1,0 +1,19 @@
+{
+  "url" : "http://hospitaldaluz.pt/fhir/ig/vitalsigns/ImplementationGuide/innovian.to.soarian",
+  "name" : "IGiNNOVIANtoSOARIAN",
+  "title" : "Guia de Implementação: Integração de Sinais Vitais (iNNOVIAN -> SOARIAN)",
+  "description" : "",
+  "status" : "draft",
+  "package-id" : "innovian.to.soarian",
+  "ig-ver" : "1.0.0",
+  "date" : "Mon, 09 Mar, 2026 17:59:40 +0000",
+  "dateISO8601" : "2026-03-09T17:59:40+00:00",
+  "errs" : 0,
+  "warnings" : 6,
+  "hints" : 1,
+  "suppressed-hints" : 0,
+  "suppressed-warnings" : 0,
+  "version" : "4.0.1",
+  "tool" : "5.0.0 (3)",
+  "maxMemory" : 654272512
+}

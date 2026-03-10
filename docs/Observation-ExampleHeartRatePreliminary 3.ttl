@@ -1,0 +1,83 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hospitaldaluz.pt/fhir/ig/vitalsigns/Observation/ExampleHeartRatePreliminary> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ExampleHeartRatePreliminary"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hospitaldaluz.pt/fhir/ig/vitalsigns/StructureDefinition/sinais-vitais-innovian-base"^^xsd:anyURI ;
+       fhir:l <http://hospitaldaluz.pt/fhir/ig/vitalsigns/StructureDefinition/sinais-vitais-innovian-base>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: Observation ExampleHeartRatePreliminary</b></p><a name=\"ExampleHeartRatePreliminary\"> </a><a name=\"hcExampleHeartRatePreliminary\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Perfil: <a href=\"StructureDefinition-sinais-vitais-innovian-base.html\">Sinais Vitais Base - iNNOVIAN</a></p></div><p><b>status</b>: Preliminary</p><p><b>category</b>: <span title=\"Códigos:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span></p><p><b>code</b>: <span title=\"Códigos:{http://loinc.org 8867-4}\">Heart rate</span></p><p><b>subject</b>: Identifier: <code>http://hospitaldaluz.pt/identifier/nhc</code>/12345678</p><p><b>encounter</b>: Identifier: <code>http://hospitaldaluz.pt/soarian/encounter</code>/enc-2026-0001</p><p><b>effective</b>: 2026-03-09 15:03:15+0000</p><p><b>performer</b>: Dräger iNNOVIAN</p><p><b>value</b>: 82 bpm<span style=\"background: LightGoldenRodYellow\"> (Detalhes: UCUM código/min = '/min')</span></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "preliminary"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/observation-category>
+       ] ;
+       fhir:code [ fhir:v "vital-signs" ] ;
+       fhir:display [ fhir:v "Vital Signs" ]
+     ] ) ;
+     fhir:text [ fhir:v "Vital Signs" ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:8867-4 ;
+       fhir:system [
+         fhir:v "http://loinc.org"^^xsd:anyURI ;
+         fhir:l <http://loinc.org>
+       ] ;
+       fhir:code [ fhir:v "8867-4" ] ;
+       fhir:display [ fhir:v "Heart rate" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:identifier [
+       fhir:system [
+         fhir:v "http://hospitaldaluz.pt/identifier/nhc"^^xsd:anyURI ;
+         fhir:l <http://hospitaldaluz.pt/identifier/nhc>
+       ] ;
+       fhir:value [ fhir:v "12345678" ]
+     ]
+  ] ; # 
+  fhir:encounter [
+     fhir:identifier [
+       fhir:system [
+         fhir:v "http://hospitaldaluz.pt/soarian/encounter"^^xsd:anyURI ;
+         fhir:l <http://hospitaldaluz.pt/soarian/encounter>
+       ] ;
+       fhir:value [ fhir:v "enc-2026-0001" ]
+     ]
+  ] ; # 
+  fhir:effective [
+     a fhir:DateTime ;
+     fhir:v "2026-03-09T15:03:15Z"^^xsd:dateTime
+  ] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "Dräger iNNOVIAN" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "82"^^xsd:decimal ] ;
+     fhir:unit [ fhir:v "bpm" ] ;
+     fhir:system [
+       fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+       fhir:l <http://unitsofmeasure.org>
+     ] ;
+     fhir:code [ fhir:v "/min" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,28 @@
+[{
+  "id" : "innovian.to.soarian",
+  "type" : "ImplementationGuide",
+  "url" : "http://hospitaldaluz.pt/fhir/ig/vitalsigns/ImplementationGuide/innovian.to.soarian",
+  "version" : "1.0.0",
+  "name" : "IGiNNOVIANtoSOARIAN"
+},
+{
+  "id" : "vitals-snapshot",
+  "type" : "OperationDefinition",
+  "url" : "http://hospitaldaluz.pt/fhir/ig/vitalsigns/OperationDefinition/vitals-snapshot",
+  "version" : "1.0.0",
+  "name" : "VitalsSnapshot"
+},
+{
+  "id" : "sinais-vitais-innovian-base",
+  "type" : "StructureDefinition",
+  "url" : "http://hospitaldaluz.pt/fhir/ig/vitalsigns/StructureDefinition/sinais-vitais-innovian-base",
+  "version" : "1.0.0",
+  "name" : "SinaisVitaisInnovianBase"
+},
+{
+  "id" : "codigos-vitais-innovian-vs",
+  "type" : "ValueSet",
+  "url" : "http://hospitaldaluz.pt/fhir/ig/vitalsigns/ValueSet/codigos-vitais-innovian-vs",
+  "version" : "1.0.0",
+  "name" : "CodigosVitaisInnovianVS"
+}]

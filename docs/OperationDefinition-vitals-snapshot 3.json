@@ -1,0 +1,62 @@
+{
+  "resourceType" : "OperationDefinition",
+  "id" : "vitals-snapshot",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: OperationDefinition vitals-snapshot</b></p><a name=\"vitals-snapshot\"> </a><a name=\"hcvitals-snapshot\"> </a><p>URL: [base]/Observation/$vitals-snapshot</p><h3>Parâmetros</h3><table class=\"grid\"><tr><td><b>Utilização</b></td><td><b>Nome</b></td><td><b>Âmbito de aplicação</b></td><td><b>Cardinalidade</b></td><td><b>Tipo</b></td><td><b>Vínculo</b></td><td><b>Documentação</b></td></tr><tr><td>IN</td><td>requestId</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a></td><td/><td><div><p>Identificador único do pedido (UUID).</p>\n</div></td></tr><tr><td>IN</td><td>patient</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>Identificador do Cliente (Preferencialmente o NHC).</p>\n</div></td></tr><tr><td>IN</td><td>requestedDateTime</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#dateTime\">dateTime</a></td><td/><td><div><p>Hora da colheita no Soarian (timestamp T).</p>\n</div></td></tr><tr><td>IN</td><td>code</td><td/><td>1..*</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Coding\">Coding</a></td><td/><td><div><p>Lista de códigos LOINC dos sinais vitais a extrair</p>\n</div></td></tr><tr><td>OUT</td><td>return</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/bundle.html\">Bundle</a></td><td/><td><div><p>Resposta do servidor em formato de Bundle com as avaliações individuais</p>\n</div></td></tr></table></div>"
+  },
+  "url" : "http://hospitaldaluz.pt/fhir/ig/vitalsigns/OperationDefinition/vitals-snapshot",
+  "version" : "1.0.0",
+  "name" : "VitalsSnapshot",
+  "title" : "Operação - Extração de Snapshot de Sinais Vitais",
+  "status" : "draft",
+  "kind" : "operation",
+  "date" : "2026-03-09T17:59:40+00:00",
+  "publisher" : "Miguel Figueiredo",
+  "description" : "Operação personalizada para pedir os sinais vitais ao iNNOVIAN baseada na Hora da Colheita.",
+  "code" : "vitals-snapshot",
+  "resource" : ["Observation"],
+  "system" : false,
+  "type" : true,
+  "instance" : false,
+  "parameter" : [{
+    "name" : "requestId",
+    "use" : "in",
+    "min" : 1,
+    "max" : "1",
+    "documentation" : "Identificador único do pedido (UUID).",
+    "type" : "string"
+  },
+  {
+    "name" : "patient",
+    "use" : "in",
+    "min" : 1,
+    "max" : "1",
+    "documentation" : "Identificador do Cliente (Preferencialmente o NHC).",
+    "type" : "Identifier"
+  },
+  {
+    "name" : "requestedDateTime",
+    "use" : "in",
+    "min" : 1,
+    "max" : "1",
+    "documentation" : "Hora da colheita no Soarian (timestamp T).",
+    "type" : "dateTime"
+  },
+  {
+    "name" : "code",
+    "use" : "in",
+    "min" : 1,
+    "max" : "*",
+    "documentation" : "Lista de códigos LOINC dos sinais vitais a extrair",
+    "type" : "Coding"
+  },
+  {
+    "name" : "return",
+    "use" : "out",
+    "min" : 1,
+    "max" : "1",
+    "documentation" : "Resposta do servidor em formato de Bundle com as avaliações individuais",
+    "type" : "Bundle"
+  }]
+}

@@ -1,0 +1,26 @@
+IGiNNOVIANtoSOARIAN : Validation Results
+=========================================
+
+err = 0, warn = 6, info = 1
+IG Publisher Version: 2.1.2
+Generated Mon Mar 09 18:00:09 WET 2026. FHIR version 4.0.1 for innovian.to.soarian#1.0.0 (canonical = http://hospitaldaluz.pt/fhir/ig/vitalsigns)
+ Build Errors : 0 / 4 / 0
+ /Users/miguelamorfigueiredo/Documents/HL7FHIR/IG-iNNOSoarian/iNNOVIANtoSOARIAN/fsh-generated/resources/ImplementationGuide-innovian.to.soarian : 0 / 0 / 1
+ /Users/miguelamorfigueiredo/Documents/HL7FHIR/IG-iNNOSoarian/iNNOVIANtoSOARIAN/fsh-generated/resources/Observation-ExampleHeartRatePreliminary : 0 / 2 / 2
+ /Users/miguelamorfigueiredo/Documents/HL7FHIR/IG-iNNOSoarian/iNNOVIANtoSOARIAN/fsh-generated/resources/OperationDefinition-vitals-snapshot : 0 / 0 / 1
+ /Users/miguelamorfigueiredo/Documents/HL7FHIR/IG-iNNOSoarian/iNNOVIANtoSOARIAN/fsh-generated/resources/StructureDefinition-sinais-vitais-innovian-base : 0 / 0 / 2
+ /Users/miguelamorfigueiredo/Documents/HL7FHIR/IG-iNNOSoarian/iNNOVIANtoSOARIAN/fsh-generated/resources/ValueSet-codigos-vitais-innovian-vs : 0 / 0 / 1
+</table>
+== n/a ==
+WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+== fsh-generated/resources/ImplementationGuide-innovian.to.soarian.json ==
+== fsh-generated/resources/Observation-ExampleHeartRatePreliminary.json ==
+WARNING: Observation/ExampleHeartRatePreliminary: Observation.subject.identifier.system: Não foi possível encontrar uma definição para o valor URL 'http://hospitaldaluz.pt/identifier/nhc'
+WARNING: Observation/ExampleHeartRatePreliminary: Observation.encounter.identifier.system: Não foi possível encontrar uma definição para o valor URL 'http://hospitaldaluz.pt/soarian/encounter'
+== fsh-generated/resources/OperationDefinition-vitals-snapshot.json ==
+== fsh-generated/resources/StructureDefinition-sinais-vitais-innovian-base.json ==
+INFORMATION: StructureDefinition/sinais-vitais-innovian-base: StructureDefinition.snapshot.element[4].binding.extension[0]: O extensão http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 está obsoleto
+== fsh-generated/resources/ValueSet-codigos-vitais-innovian-vs.json ==

@@ -1,0 +1,28 @@
+# innovian.to.soarian#1.0.0: Guia de Implementação: Integração de Sinais Vitais (iNNOVIAN -> SOARIAN)
+
+## Pages
+
+* [Regras de Extração e Janelas Temporais](index.md)
+* [Artifacts Summary](artifacts.md)
+
+## Resources
+
+### ValueSets
+
+* [Value Set de Sinais Vitais do iNNOVIAN](ValueSet-codigos-vitais-innovian-vs.md)
+
+### Resource Profiles
+
+* [Sinais Vitais Base - iNNOVIAN](StructureDefinition-sinais-vitais-innovian-base.md)
+
+### ImplementationGuides
+
+* [Guia de Implementação: Integração de Sinais Vitais (iNNOVIAN -> SOARIAN)](index.md)
+
+### OperationDefinitions
+
+* [Operação - Extração de Snapshot de Sinais Vitais](OperationDefinition-vitals-snapshot.md)
+
+### Examples
+
+* [ExampleHeartRatePreliminary (Observation)](Observation-ExampleHeartRatePreliminary.md)
