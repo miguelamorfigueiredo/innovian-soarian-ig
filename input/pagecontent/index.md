@@ -5,6 +5,35 @@ Este guia define as regras de interoperabilidade e a arquitetura de dados para a
 
 A solução assenta numa operação FHIR personalizada (`$vitals-snapshot`) que permite solicitar sinais vitais com base na Hora da Colheita, garantindo segurança clínica através da utilização de códigos LOINC, regras temporais explícitas e tratamento seguro de ausência de dados.
 
+### Arquitetura de Integração
+```mermaid
+flowchart LR
+    %% Bloco Superior: Arquitetura e Mapeamento
+    subgraph Fluxo de Integração e Transformação LOINC
+        direction LR
+        A[(Monitor\niNNOVIAN box3)] -->|Extração API| B{Servidor de\nIntegração FHIR}
+        
+        B -->|FC: 8867-4 bpm| C1[Freq. Cardíaca]
+        B -->|SpO2: 59408-5 %| C2[Oximetria]
+        B -->|FRi: 9279-1 resp./min| C3[Freq. Respiratória]
+        B -->|PNI: 8480-6 / 8462-4 mmHg| C4[Pressão Arterial]
+        
+        %% Agrupar a tabela do Soarian
+        subgraph Tabela Soarian
+            C1
+            C2
+            C3
+            C4
+        end
+    end
+
+    %% Bloco Inferior: O Modelo de Dados FHIR
+    subgraph Modelo de Dados FHIR (Exemplo Frequência Cardíaca)
+        direction LR
+        P((Paciente\nID: 5390745)) -->|subject.reference\nPatient/5390745| O(Observação FHIR\nFC: 130 bpm)
+        D[[Monitor Draeger\nID: 999]] -->|device.reference\nDevice/999| O
+    end
+```
 ---
 
 ## 2. Trigger da Integração
@@ -14,15 +43,13 @@ Nesse momento, o SOARIAN define o instante **T** (“Hora da Colheita”) e envi
 
 ---
 
-## 3. Regras de Extração e Tolerâncias Temporais
-Para garantir relevância clínica e evitar a importação de valores desatualizados, o middleware deve pesquisar no iNNOVIAN dentro de uma janela temporal definida em torno de **T**.
+## 3. Tolerâncias Temporais (Regras de Extração)
+Para garantir que o doente não recebe dados desatualizados, o *Middleware* (DSTI) tem de aplicar uma janela de pesquisa assimétrica `[T - tol, T + tol[` na base de dados do iNNOVIAN.
 
-As tolerâncias clínicas adotadas neste projeto são:
+As tolerâncias definidas clinicamente para este projeto são:
+* **Todos os Sinais Vitais** (Frequência Cardíaca, Frequência Respiratória, SpO2, Pressão Arterial Sistólica/Diastólica e Temperatura Corporal): Tolerância estrita de **± 3 minutos**.
 
-* **Frequência Cardíaca, Frequência Respiratória, SpO2, Pressão Arterial Sistólica e Pressão Arterial Diastólica**: **± 3 minutos**
-* **Temperatura Corporal**: **± 60 minutos**
-
-A pesquisa deve respeitar a janela assimétrica `[T - tolerância, T + tolerância[`.
+*Nota Clínica sobre a Temperatura:* A extração da Temperatura Corporal via integração automática está desenhada especificamente para cenários de monitorização contínua (ex: sensores de temperatura nos monitores Dräger em Neonatologia ou Cuidados Intensivos). Avaliações pontuais de temperatura (ex: auricular) inseridas manualmente no iNNOVIAN não são alvo desta operação de *Snapshot*.
 
 ---
 

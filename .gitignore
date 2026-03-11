@@ -2,3 +2,5 @@ output/
 temp/
 fsh-generated/
 input-cache/
+docs/
+template/
